@@ -1,0 +1,158 @@
+.dashboard-container {
+  display: flex;
+  overflow: hidden; /* Prevents any overflow from breaking the layout */
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure the topbar stays above everything */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.topbar-items {
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.topbar-items span {
+  margin-left: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.user-icon {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon svg {
+  margin-right: 5px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 60px; /* Below the top bar */
+  left: 0;
+  width: 250px;
+  height: calc(100% - 60px);
+  background-color: #343a40;
+  padding-top: 20px;
+  color: white;
+  overflow-y: auto; /* Enables scrolling when content overflows */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* Move the arrow to the right */
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.sidebar ul li:hover {
+  background-color: #495057;
+}
+
+.sidebar ul li + ul.dropdown {
+  padding-left: 20px;
+}
+
+.dropdown {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown li {
+  padding: 10px 0;
+  cursor: pointer;
+  color: #fff;
+}
+
+.dropdown li:hover {
+  background-color: #6c757d;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+  background-color: #f1f3f5;
+  overflow-y: auto; /* Allows main content to scroll independently */
+   /* Full viewport height for scrollable content */
+}
+
+.sidebar ul li a {
+  color: #ffffff; /* Choose the color you want for the links */
+  text-decoration: none; /* Remove underline if needed */
+}
+
+.sidebar ul li a:hover {
+  color: #6c757d; /* Change to a darker shade for hover effect, optional */
+}
+.admin-panel-link {
+  font-size: 24px; /* Başlık boyutunu ayarlar */
+  font-weight: bold; /* Kalın metin */
+  color: #000000; /* Siyah renk */
+  text-decoration: none; /* Alt çizgiyi kaldırır */
+  text-align: center; /* Metni ortalar */
+  cursor: pointer; /* Fare üzerine gelince el simgesi gösterir */
+  transition: transform 0.2s ease; /* Büyüklük geçişi ekler */
+}
+
+.admin-panel-link:hover {
+  transform: scale(1.05); /* Hover'da hafifçe büyütür */
+}
+
+.admin-panel-link:active {
+  transform: scale(0.95); /* Tıklandığında hafifçe küçülür */
+}
+.user-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.user-dropdown ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-dropdown li {
+  margin: 10px 0;
+}
+
+.user-dropdown a {
+  color: #333;
+  text-decoration: none;
+}
+
+.user-dropdown a:hover {
+  color: #007bff;
+}
